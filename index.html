@@ -3,518 +3,521 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="theme-color" content="#209cee">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
+  <title>LGSR: Language-Guided State Representation in World Models</title>
+  <meta name="title" content="Improving Policy Learning via Language-Guided State Representation in World Models">
+  <meta name="description" content="LGSR uses language instructions to guide compact, task-relevant state representations in world models, improving long-horizon robotic policy learning.">
+  <meta name="keywords" content="world models, representation learning, imitation learning, language-conditioned robotics, robot manipulation, CALVIN, LIBERO">
+  <meta name="author" content="Lixuan Zhang, Meina Kan, Shiguang Shan, Xilin Chen">
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="og:site_name" content="LGSR Project Page">
+  <meta property="og:title" content="Improving Policy Learning via Language-Guided State Representation in World Models">
+  <meta property="og:description" content="Language-guided state representations help world models retain task-relevant information for multi-task robot policy learning.">
+  <meta property="og:url" content="https://zhanglixuan0720.github.io/lgsr.github.io/">
+  <meta property="og:image" content="https://zhanglixuan0720.github.io/lgsr.github.io/static/images/paper/framework.png">
+  <meta property="og:image:alt" content="Overview of the LGSR framework">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Improving Policy Learning via Language-Guided State Representation in World Models">
+  <meta name="twitter:description" content="Language-guided state representations for world-model-based robotic policy learning.">
+  <meta name="twitter:image" content="https://zhanglixuan0720.github.io/lgsr.github.io/static/images/paper/framework.png">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <meta name="citation_title" content="Improving Policy Learning via Language-Guided State Representation in World Models">
+  <meta name="citation_author" content="Zhang, Lixuan">
+  <meta name="citation_author" content="Kan, Meina">
+  <meta name="citation_author" content="Shan, Shiguang">
+  <meta name="citation_author" content="Chen, Xilin">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="IEEE Robotics and Automation Letters">
+  <meta name="citation_pdf_url" content="https://zhanglixuan0720.github.io/lgsr.github.io/static/pdfs/lgsr-paper.pdf">
 
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Improving Policy Learning via Language-Guided State Representation in World Models",
+    "description": "LGSR uses language instructions to guide compact task-relevant state representations in world models for multi-task robotic policy learning.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Lixuan Zhang"},
+      {"@type": "Person", "name": "Meina Kan"},
+      {"@type": "Person", "name": "Shiguang Shan"},
+      {"@type": "Person", "name": "Xilin Chen"}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "datePublished": "2026",
+    "publisher": {"@type": "Organization", "name": "IEEE"},
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "url": "https://zhanglixuan0720.github.io/lgsr.github.io/",
+    "image": "https://zhanglixuan0720.github.io/lgsr.github.io/static/images/paper/framework.png"
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+  <nav class="project-nav" aria-label="Project page navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#overview" aria-label="LGSR overview"><span class="brand-mark">L</span>LGSR</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#representation">Representations</a>
+        <a href="#additional-analyses">Supplementary</a>
+        <a href="#citation">BibTeX</a>
       </div>
     </div>
-  </div>
+  </nav>
+
+  <button class="scroll-to-top" type="button" aria-label="Scroll to top" title="Scroll to top">↑</button>
+
+  <header class="publication-header" id="overview">
+    <div class="container is-max-desktop hero-copy">
+      <p class="eyebrow">IEEE Robotics and Automation Letters · Accepted July 2026</p>
+      <h1>Improving Policy Learning via Language-Guided State Representation in World Models</h1>
+      <p class="authors">
+        <span>Lixuan Zhang</span><span>Meina Kan</span><span>Shiguang Shan</span><span>Xilin Chen</span>
+      </p>
+      <p class="affiliation">State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences<br>University of Chinese Academy of Sciences</p>
+      <div class="hero-actions">
+        <a class="button is-dark is-rounded" href="static/pdfs/lgsr-paper.pdf">Paper</a>
+        <a class="button is-dark is-rounded" href="https://github.com/zhanglixuan0720/LGSR" target="_blank" rel="noopener noreferrer">Code</a>
+      </div>
+    </div>
+  </header>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
+    <section class="section abstract-section" aria-labelledby="abstract-title">
+      <div class="container is-max-desktop narrow-copy">
+        <div class="section-heading">
+          <h2 id="abstract-title">Abstract</h2>
+        </div>
+        <div class="abstract-copy">
+          <p>World models have emerged as powerful technology for facilitating policy learning in robotics by providing predictive representations of environmental dynamics. A crucial component of such models is the internal state representation, which serves as a bridge between observation, decision-making, and future state prediction. However, in multi-task settings, the presence of task-irrelevant information within the representation, especially under limited information capacity, can significantly impair the effectiveness of policy learning.</p>
+          <p>To address this challenge, we propose Language-Guided State Representation (LGSR), a novel method that leverages language-based task descriptions as priors to guide the encoding of state representations within the world model. By incorporating language instructions, LGSR promotes the extraction of task-relevant features while suppressing irrelevant information, thereby enhancing the alignment between representation learning and task objectives.</p>
+          <p>We evaluate LGSR on the CALVIN benchmark, a suite of language-conditioned robotic manipulation tasks. Experimental results demonstrate that incorporating language priors into the state representation enhances the extraction of task-relevant information, thereby significantly improving the efficiency and success rate of downstream policy learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section framework-section" id="method" aria-labelledby="method-title">
       <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+        <div class="section-heading centered-heading">
+          <h2 id="method-title">Method</h2>
+          <p class="method-thesis">Let the task decide what the state should remember.</p>
+          <p class="lead">LGSR injects language at the encoder stage, compressing visual observations into a task-conditioned state before the world model predicts the future and the policy predicts actions.</p>
+        </div>
+        <figure class="hero-figure">
+          <img src="static/images/paper/framework.png" alt="LGSR architecture: CLIP language and MAE visual features enter a multimodal perceiver encoder, whose task-conditioned state feeds a shared world model and policy transformer.">
+          <figcaption>The LGSR framework. Frozen language and vision encoders feed a Multimodal Perceiver Encoder (MPE); the resulting compact state supports future prediction and action learning.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+    <section class="section results-section" id="results" aria-labelledby="results-title">
+      <div class="container is-max-desktop">
+        <div class="section-heading centered-heading">
+          <h2 id="results-title">Results</h2>
+          <p class="lead">Strong long-horizon control with a compact trainable model.</p>
+        </div>
+        <ul class="metric-grid" aria-label="Headline results">
+          <li class="metric-card"><strong>4.22</strong><span>CALVIN Avg. Len.</span><small>Best reported LGSR variant</small></li>
+          <li class="metric-card"><strong>65M</strong><span>Trainable parameters</span><small>No robot-data pretraining</small></li>
+          <li class="metric-card"><strong>40 Hz</strong><span>Inference frequency</span><small>Measured on RTX 4090</small></li>
+          <li class="metric-card"><strong>70%</strong><span>Training data</span><small>Matches full-data LGSR performance</small></li>
+        </ul>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+        <article class="result-block">
+          <div class="block-heading">
+            <h3>Long-horizon multi-task language control</h3>
+          </div>
+          <p>Models train on environments A, B, and C, then execute five-instruction chains in unseen environment D. LGSR with the proxy target completes 4.22 subtasks on average, exceeding the scratch Seer baseline by 0.58 and OpenVLA by 0.95.</p>
+          <div class="table-scroll">
+            <table>
+              <caption>Selected CALVIN ABC-D results from the final manuscript.</caption>
+              <thead><tr><th scope="col">Method</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">Avg. Len.</th><th scope="col">Trainable</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OpenVLA</th><td>91.3%</td><td>77.8%</td><td>62.0%</td><td>52.1%</td><td>43.5%</td><td>3.27</td><td>~100M</td></tr>
+                <tr><th scope="row">Seer (scratch)</th><td>93.0%</td><td>82.4%</td><td>73.0%</td><td>62.6%</td><td>53.3%</td><td>3.64</td><td>65M</td></tr>
+                <tr><th scope="row">LGSR</th><td>95.1%</td><td>88.4%</td><td>81.1%</td><td>73.2%</td><td>66.0%</td><td>4.04</td><td>65M</td></tr>
+                <tr class="highlight-row"><th scope="row">LGSR + proxy</th><td>96.3%</td><td>90.8%</td><td>84.5%</td><td>78.1%</td><td>71.9%</td><td><strong>4.22</strong></td><td>65M</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+        <div class="figure-grid ablation-grid">
+          <figure class="panel-figure">
+            <img src="static/images/paper/data-efficiency.png" alt="Average sequence length versus CALVIN training-data proportion for LGSR, its language-free variant, and Seer.">
+            <figcaption><strong>Data efficiency.</strong> At 70% of the language-annotated split, LGSR already exceeds Seer trained with the full annotated and unannotated sets.</figcaption>
+          </figure>
+          <figure class="panel-figure">
+            <img src="static/images/paper/token-robustness.png" alt="Average sequence length versus state representation token count for LGSR and the variant without language guidance.">
+            <figcaption><strong>Capacity robustness.</strong> Language guidance helps from one to six state tokens; with one token, LGSR delivers a 17.7% relative improvement.</figcaption>
+          </figure>
+          <figure class="panel-figure wide-figure">
+            <img src="static/images/paper/instruction-components.png" alt="Effect of masking Goal, Constraint, Action, Spatial, Logic, and Other instruction components.">
+            <figcaption><strong>What words matter?</strong> Goal, constraint, and spatial words are most important for learning task-relevant states; action words contribute little, while removing distracting logic or filler can help.</figcaption>
+          </figure>
+        </div>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+          <article class="result-block">
+            <div class="block-heading"><h3>Which proxy target works?</h3></div>
+            <div class="table-scroll">
+              <table>
+                <caption>Proxy-target ablation on CALVIN ABC-D.</caption>
+                <thead><tr><th scope="col">Target</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">Avg.</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Binary success<span class="target-formula">rₜ = 1[t = T]</span></th><td>92.4%</td><td>83.5%</td><td>74.6%</td><td>66.5%</td><td>58.6%</td><td>3.76</td></tr>
+                  <tr><th scope="row">Elapsed progress<span class="target-formula">rₜ = t/T</span></th><td>94.8%</td><td>87.0%</td><td>78.8%</td><td>70.2%</td><td>62.8%</td><td>3.93</td></tr>
+                  <tr class="highlight-row"><th scope="row">Time-to-go<span class="target-formula">rₜ = (T − t)/T</span></th><td>96.3%</td><td>90.8%</td><td>84.5%</td><td>78.1%</td><td>71.9%</td><td><strong>4.22</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="result-block">
+            <div class="block-heading"><h3>Is task identity in the state?</h3></div>
+            <div class="table-scroll">
+              <table>
+                <caption>Task-ID prediction accuracy from frozen representations; mean ± sample standard deviation over 20 train/test splits.</caption>
+                <thead><tr><th scope="col">Representation</th><th scope="col">CALVIN</th><th scope="col">LIBERO-Long</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Seer</th><td>48.54 ± 1.19%</td><td>99.62 ± 0.15%</td></tr>
+                  <tr><th scope="row">LGSR</th><td>97.94 ± 0.32%</td><td>100.00 ± 0.00%</td></tr>
+                  <tr class="highlight-row"><th scope="row">LGSR + proxy</th><td><strong>98.38 ± 0.41%</strong></td><td>100.00 ± 0.00%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-takeaway">Language fusion contributes the large separability gain. The much smaller proxy effect depends on the feature probe and benchmark.</p>
+          </article>
+      </div>
+    </section>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+    <section class="section" id="representation" aria-labelledby="representation-title">
+      <div class="container is-max-desktop">
+        <div class="section-heading">
+          <h2 id="representation-title">Representation Analysis</h2>
+          <p class="lead">What survives a one-token language-guided bottleneck? An inverse decoder lifts the frozen one-token LGSR back into MAE feature space before the same frozen MAE decoder reconstructs the scene.</p>
+        </div>
+        <div class="reconstruction-cases">
+          <figure class="reconstruction-case">
+            <div class="reconstruction-labels" aria-hidden="true"><span>Raw</span><span>MAE</span><span>MPE · one token</span></div>
+            <div class="reconstruction-grid">
+              <img src="static/images/paper/reconstruction-lift-blue-block-drawer-original.png" alt="Raw view for lifting the blue block from the drawer.">
+              <img src="static/images/paper/reconstruction-lift-blue-block-drawer-mae.png" alt="MAE reconstruction for lifting the blue block from the drawer.">
+              <img src="static/images/paper/reconstruction-lift-blue-block-drawer-bottleneck.png" alt="One-token MPE reconstruction retaining the blue block.">
+            </div><figcaption>Lift the <strong>blue block</strong> from the drawer.</figcaption>
+          </figure>
+          <figure class="reconstruction-case">
+            <div class="reconstruction-labels" aria-hidden="true"><span>Raw</span><span>MAE</span><span>MPE · one token</span></div>
+            <div class="reconstruction-grid">
+              <img src="static/images/paper/reconstruction-lift-pink-block-drawer-original.png" alt="Raw view for lifting the pink block from the drawer.">
+              <img src="static/images/paper/reconstruction-lift-pink-block-drawer-mae.png" alt="MAE reconstruction for lifting the pink block from the drawer.">
+              <img src="static/images/paper/reconstruction-lift-pink-block-drawer-bottleneck.png" alt="One-token MPE reconstruction retaining the pink block.">
+            </div><figcaption>Lift the <strong>pink block</strong> from the drawer.</figcaption>
+          </figure>
+          <figure class="reconstruction-case">
+            <div class="reconstruction-labels" aria-hidden="true"><span>Raw</span><span>MAE</span><span>MPE · one token</span></div>
+            <div class="reconstruction-grid">
+              <img src="static/images/paper/reconstruction-lift-red-block-drawer-original.png" alt="Raw view for lifting the red block from the drawer.">
+              <img src="static/images/paper/reconstruction-lift-red-block-drawer-mae.png" alt="MAE reconstruction for lifting the red block from the drawer.">
+              <img src="static/images/paper/reconstruction-lift-red-block-drawer-bottleneck.png" alt="One-token MPE reconstruction retaining the red block.">
+            </div><figcaption>Lift the <strong>red block</strong> from the drawer.</figcaption>
+          </figure>
+          <figure class="reconstruction-case">
+            <div class="reconstruction-labels" aria-hidden="true"><span>Raw</span><span>MAE</span><span>MPE · one token</span></div>
+            <div class="reconstruction-grid">
+              <img src="static/images/paper/reconstruction-close-drawer-original.png" alt="Raw view for closing the drawer.">
+              <img src="static/images/paper/reconstruction-close-drawer-mae.png" alt="MAE reconstruction for closing the drawer.">
+              <img src="static/images/paper/reconstruction-close-drawer-bottleneck.png" alt="One-token MPE reconstruction retaining the drawer.">
+            </div><figcaption><strong>Close the drawer.</strong></figcaption>
+          </figure>
+        </div>
+        <p class="representation-summary">Fine appearance details are discarded, but the language-specified block—or the drawer itself—remains. This directly supports the claim that MPE spends limited state capacity on task-relevant scene content.</p>
+      </div>
+    </section>
+
+    <section class="section addendum-section" id="additional-analyses" aria-labelledby="additional-title">
+      <div class="container is-max-desktop">
+        <div class="section-heading">
+          <h2 id="additional-title">Supplementary Material</h2>
+          <p class="lead">Additional implementation details, CALVIN analyses, cross-benchmark experiments, diagnostics, and limitations that complement the main paper.</p>
+        </div>
+
+        <article class="addendum-block" aria-labelledby="mask-title">
+          <div class="block-heading"><h3 id="mask-title">Architecture</h3></div>
+          <figure class="architecture-figure">
+            <img src="static/images/additional/architecture.png" alt="Detailed LGSR architecture with the MPE, Perceiver Resampler, reward head, world model, and policy.">
+            <figcaption>Detailed end-to-end LGSR architecture.</figcaption>
+          </figure>
+          <h4 class="supplementary-subtitle">Transformer Inputs and Prediction Slots</h4>
+          <p>At timestep <em>i</em>, the transformer receives a context block <span class="formula">Aᵢ = [language, proprioception, visual state]</span> followed by prediction slots <span class="formula">Bᵢ = [mₒ, mₐ]</span>. Ground-truth future observations and actions are decoding targets, never input tokens. World-model and policy features are produced by one shared forward pass.</p>
+          <div class="mask-layout">
+            <div class="table-scroll mask-table-wrap">
+              <table class="mask-table">
+                <caption>K = 2 attention mask. ● is allowed; — is masked. Rows are queries and columns are keys.</caption>
+                <thead><tr><th scope="col">Query ↓ / Key →</th><th scope="col">A₁</th><th scope="col">mₒ¹</th><th scope="col">mₐ¹</th><th scope="col">A₂</th><th scope="col">mₒ²</th><th scope="col">mₐ²</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">A₁</th><td class="allowed">●</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><th scope="row">mₒ¹</th><td class="allowed">●</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><th scope="row">mₐ¹</th><td class="allowed">●</td><td class="allowed">●</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><th scope="row">A₂</th><td class="allowed">●</td><td>—</td><td>—</td><td class="allowed">●</td><td>—</td><td>—</td></tr>
+                  <tr><th scope="row">mₒ²</th><td class="allowed">●</td><td>—</td><td>—</td><td class="allowed">●</td><td>—</td><td>—</td></tr>
+                  <tr><th scope="row">mₐ²</th><td class="allowed">●</td><td>—</td><td>—</td><td class="allowed">●</td><td class="allowed">●</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ol class="constraint-list">
+              <li><strong>Causal over time.</strong> Step <em>i</em> cannot read any token from a later timestep.</li>
+              <li><strong>Prediction slots are sinks.</strong> Context and future slots cannot read prediction tokens, preventing target leakage.</li>
+              <li><strong>One deliberate exception.</strong> Same-step action token <em>mₐ</em> can read <em>mₒ</em>, so the policy reads the internally predicted future feature.</li>
+            </ol>
+          </div>
+          <p class="inference-note"><strong>Inference:</strong> use the same mask tokens, decode the latest action chunk, execute its first action, advance history by one observation, and repeat. The future decoder is an auxiliary training signal; control is produced from the action feature.</p>
+        </article>
+
+        <article class="addendum-block" aria-labelledby="prediction-title">
+          <div class="block-heading"><h3 id="prediction-title">Additional CALVIN Experiments</h3></div>
+          <h4 class="supplementary-subtitle">Prediction-Target Ablation</h4>
+          <p>All rows use the same LGSR pipeline; only the future-vision target changes. Zero-mean patch prediction removes low-level patch appearance bias while retaining the local structure needed for predictive state learning.</p>
+          <div class="table-scroll">
+            <table>
+              <caption>CALVIN ABC-D success rates under different world-model prediction targets.</caption>
+              <thead><tr><th scope="col">Prediction target</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">Avg. Len.</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">MAE latent</th><td>81.0%</td><td>59.8%</td><td>44.4%</td><td>31.5%</td><td>22.6%</td><td>2.39</td></tr>
+                <tr><th scope="row">Raw RGB</th><td>95.1%</td><td>86.7%</td><td>78.7%</td><td>71.2%</td><td>64.3%</td><td>3.96</td></tr>
+                <tr class="highlight-row"><th scope="row">Zero-mean patch</th><td>95.1%</td><td>88.4%</td><td>81.1%</td><td>73.2%</td><td>66.0%</td><td><strong>4.04</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="insight-callout"><strong>CALVIN trajectory variability.</strong><p>Across 34 CALVIN tasks, per-task mean episode length ranges from <strong>44.6</strong> to <strong>65.0</strong> frames, while within-task standard deviation reaches <strong>12.4</strong> frames. The time-to-go target is normalized independently within each successful trajectory rather than against a fixed global duration.</p></div>
+          <section class="reproducibility-subsection" aria-labelledby="annotation-title">
+          <h4 id="annotation-title">Instruction Annotation Protocol</h4>
+          <p>This protocol supplies the Goal, Constraint, Action, Spatial, Logic, and Other labels used by the instruction-component masking ablation shown in Results. Each deduplicated CALVIN instruction is labeled automatically, loaded into a span-colored viewer, and checked or corrected by a human annotator. During the ablation, only the corresponding spans in the LGSR encoder’s instruction are masked; the policy always receives the full instruction, isolating representation-level effects.</p>
+          <ul class="label-grid" aria-label="Instruction label categories">
+            <li><b>G</b> Goal</li><li><b>C</b> Constraint</li><li><b>A</b> Action</li><li><b>S</b> Spatial</li><li><b>L</b> Logic</li><li><b>O</b> Other</li>
+          </ul>
+          <details class="prompt-details">
+            <summary>Read the full annotation prompt</summary>
+            <pre><code>[SYSTEM]
+You are an expert annotator for robot-instruction semantics.
+You must label tokens/spans into exactly five classes:
+- G (Goal): target objects or entities (the noun head of the target NP).
+- C (Constraint): attributes, colors, quantities, determiners, ordinal words that restrict G or A.
+- A (Action): executable actions (verbs and their particles), e.g., "pick up", "take off".
+- S (Spatial): spatial/positional/relational expressions (prepositions, directional adverbs, PP chunks).
+- L (Logic): sequencing/logic connectors ("and", "then", "if", "before", "after", ...).
+Tokens that fall into none of the five classes are tagged O.
+
+Rules:
+1) Prefer span-level labeling with contiguous spans. Multiword expressions like "pick up", "in front of" must be a single span.
+2) Within a noun phrase, the head noun is G; its modifiers (color/quantity/ordinal) are C.
+3) Spatial phrases that modify G or motion are S (e.g., "in the drawer", "towards the door").
+4) Logic words are L and never overlap with A/G/C/S.
+5) If a pronoun clearly refers to the current G (e.g. "pick it up"), label the pronoun "it" as G.
+6) Output both SPANS and BIO:
+   - SPANS: a list of {start, end, label, text} where start/end are token indices (end exclusive).
+   - TOKENS: the tokenized sequence.
+   - BIO: BIO tags aligned with TOKENS (B-*, I-*, or O); BIO must reflect the same spans.
+
+Tokenization: split by whitespace and punctuation, but keep underscores (e.g., "pick_up"). Do not merge spans across non-adjacent tokens.
+Return JSON with keys "tokens", "spans", "bio". No commentary.
+
+[FEW-SHOT EXAMPLE 1]
+INPUT: "go towards the pink block in the drawer and pick it up"
+{
+  "tokens": ["go","towards","the","pink","block","in","the","drawer","and","pick","it","up"],
+  "spans": [
+    {"start":0,"end":1,"label":"A","text":"go"},
+    {"start":3,"end":4,"label":"C","text":"pink"},
+    {"start":4,"end":5,"label":"G","text":"block"},
+    {"start":1,"end":8,"label":"S","text":"towards the pink block in the drawer"},
+    {"start":8,"end":9,"label":"L","text":"and"},
+    {"start":9,"end":12,"label":"A","text":"pick it up"},
+    {"start":10,"end":11,"label":"G","text":"it"}
+  ],
+  "bio": ["B-A","B-S","I-S","B-C","B-G","B-S","I-S","I-S","B-L","B-A","B-G","I-A"]
+}
+
+[FEW-SHOT EXAMPLE 2]
+INPUT: "go to the tower of blocks and take off the top one"
+{
+  "tokens": ["go","to","the","tower","of","blocks","and","take","off","the","top","one"],
+  "spans": [
+    {"start":0,"end":1,"label":"A","text":"go"},
+    {"start":1,"end":6,"label":"S","text":"to the tower of blocks"},
+    {"start":6,"end":7,"label":"L","text":"and"},
+    {"start":7,"end":9,"label":"A","text":"take off"},
+    {"start":10,"end":11,"label":"C","text":"top"},
+    {"start":9,"end":12,"label":"G","text":"the top one"}
+  ],
+  "bio": ["B-A","B-S","I-S","I-S","I-S","I-S","B-L","B-A","I-A","B-G","B-C","I-G"]
+}
+
+[FEW-SHOT EXAMPLE 3]
+INPUT: "take off the block that is on top of the other one"
+{
+  "tokens": ["take","off","the","block","that","is","on","top","of","the","other","one"],
+  "spans": [
+    {"start":0,"end":2,"label":"A","text":"take off"},
+    {"start":3,"end":4,"label":"G","text":"block"},
+    {"start":6,"end":9,"label":"S","text":"on top of"},
+    {"start":9,"end":12,"label":"C","text":"the other one"}
+  ],
+  "bio": ["B-A","I-A","O","B-G","O","O","B-S","I-S","I-S","B-C","I-C","I-C"]
+}
+
+[INFERENCE]
+Now annotate the following sentence:
+INPUT: "{sent}"
+Return JSON only.</code></pre>
+          </details>
+          </section>
+        </article>
+
+        <article class="addendum-block" aria-labelledby="cross-benchmark-title">
+          <div class="block-heading"><h3 id="cross-benchmark-title">Cross-Benchmark Evaluation</h3></div>
+          <p>LIBERO-Long contains ten multi-stage tasks lasting roughly 200–400 environment steps. LGSR was trained from scratch on LIBERO-Long demonstrations, using the same architecture and objectives as on CALVIN, without LIBERO-90 or external robot data.</p>
+          <div class="benchmark-grid">
+            <div class="benchmark-group">
+              <h4>CALVIN ABC-D · shared visual scene</h4>
+              <div class="example-grid">
+                <figure><img src="static/images/additional/dataset-calvin-close.png" alt="CALVIN environment D scene for closing the drawer."><figcaption>“push the drawer”</figcaption></figure>
+                <figure><img src="static/images/additional/dataset-calvin-blue.png" alt="CALVIN environment D scene for grasping the blue block in the drawer."><figcaption>“grasp the blue block in the drawer”</figcaption></figure>
+                <figure><img src="static/images/additional/dataset-calvin-light.png" alt="CALVIN environment D scene for turning off the yellow light."><figcaption>“turn off the yellow light”</figcaption></figure>
+              </div>
+              <p>Thirty-four atomic tasks share four environments. Language must disambiguate which skill and object are active within similar visual contexts.</p>
+            </div>
+            <div class="benchmark-group">
+              <h4>LIBERO-Long · task-distinct scenes</h4>
+              <div class="example-grid">
+                <figure><img src="static/images/additional/dataset-libero-kitchen.png" alt="LIBERO kitchen scene for turning on the stove and placing a moka pot."><figcaption>Stove + moka pot</figcaption></figure>
+                <figure><img src="static/images/additional/dataset-libero-living.png" alt="LIBERO living room scene for placing soup and a box in a basket."><figcaption>Soup + box + basket</figcaption></figure>
+                <figure><img src="static/images/additional/dataset-libero-study.png" alt="LIBERO study scene for placing a book in the back compartment."><figcaption>Book + caddy</figcaption></figure>
+              </div>
+              <p>Longer multi-stage instructions test temporal sequencing, but task-specific scenes make task identity nearly recoverable from vision alone.</p>
             </div>
           </div>
-        </div>
+
+          <div class="table-scroll large-table">
+            <table>
+              <caption>LIBERO-Long success rates (%), averaged over the top three checkpoints.</caption>
+              <thead><tr><th scope="col">Method</th><th scope="col">Pretrain</th><th scope="col">Avg.</th><th scope="col">T1</th><th scope="col">T2</th><th scope="col">T3</th><th scope="col">T4</th><th scope="col">T5</th><th scope="col">T6</th><th scope="col">T7</th><th scope="col">T8</th><th scope="col">T9</th><th scope="col">T10</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">MTACT</th><td>—</td><td>41.0</td><td>30.0</td><td>50.0</td><td>75.0</td><td>85.0</td><td>20.0</td><td>75.0</td><td>0.0</td><td>0.0</td><td>10.0</td><td>65.0</td></tr>
+                <tr><th scope="row">MVP</th><td>Vision</td><td>68.2</td><td>83.3</td><td>90.0</td><td>80.0</td><td>88.3</td><td>46.7</td><td>63.3</td><td>45.0</td><td>78.3</td><td>60.0</td><td>46.7</td></tr>
+                <tr><th scope="row">MPI</th><td>Vision</td><td>77.3</td><td>66.6</td><td>86.6</td><td>96.6</td><td>95.0</td><td>83.3</td><td>83.3</td><td>56.6</td><td>86.6</td><td>40.0</td><td>78.3</td></tr>
+                <tr><th scope="row">OpenVLA</th><td>VLM</td><td>53.7</td><td>35.0</td><td>95.0</td><td>65.0</td><td>45.0</td><td>40.0</td><td>80.0</td><td>60.0</td><td>45.0</td><td>20.0</td><td>55.0</td></tr>
+                <tr><th scope="row">Seer (scratch)</th><td>—</td><td>78.7</td><td>80.0</td><td>90.0</td><td>91.7</td><td>81.7</td><td>85.0</td><td>65.0</td><td>86.7</td><td>88.3</td><td>51.7</td><td>66.7</td></tr>
+                <tr><th scope="row">Seer</th><td>LIBERO-90</td><td><strong>87.7</strong></td><td>91.7</td><td>90.0</td><td>98.3</td><td>100.0</td><td>91.7</td><td>93.3</td><td>85.0</td><td>88.3</td><td>61.7</td><td>71.7</td></tr>
+                <tr class="highlight-row"><th scope="row">LGSR</th><td>—</td><td><strong>82.3</strong></td><td>100.0</td><td>91.7</td><td>91.7</td><td>85.0</td><td>83.3</td><td>93.3</td><td>71.7</td><td>90.0</td><td>46.7</td><td>70.0</td></tr>
+                <tr class="highlight-row"><th scope="row">LGSR + proxy</th><td>—</td><td><strong>82.0</strong></td><td>88.3</td><td>96.7</td><td>96.7</td><td>93.3</td><td>88.3</td><td>81.7</td><td>58.3</td><td>85.0</td><td>61.7</td><td>70.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="insight-callout"><strong>What transfers—and what saturates?</strong><p>Encoder-stage language fusion transfers: scratch LGSR reaches 82.3%, 3.6 points above scratch Seer. The proxy loss does not improve LIBERO-Long (82.0% versus 82.3%) because the representation probe is already saturated at 100%. On CALVIN, where scenes are shared across tasks, the same auxiliary adds 0.18 Avg. Len. This is why its contribution is described as benchmark-conditional.</p></div>
+        </article>
+
+        <article class="addendum-block" aria-labelledby="probe-title">
+          <div class="block-heading"><h3 id="probe-title">Attention Visualization Experiments</h3></div>
+          <h4 class="visualization-subtitle">Feature-basis probe</h4>
+          <p class="visualization-note">A PCA probe first compares the spatial structure of the candidate feature bases. MAE’s pixel-reconstruction features are distributed across the image, while DINOv2 separates objects and coherent scene regions more clearly.</p>
+          <div class="feature-basis-grid">
+            <figure><img src="static/images/additional/feature-basis-input.png" alt="Input CALVIN scene used for feature-basis comparison."><figcaption>Input</figcaption></figure>
+            <figure><img src="static/images/additional/feature-basis-mae.png" alt="PCA visualization of MAE patch features, which appears spatially distributed."><figcaption>MAE patch PCA</figcaption></figure>
+            <figure><img src="static/images/additional/feature-basis-dinov2.png" alt="PCA visualization of DINOv2 patch features, which separates coherent spatial regions."><figcaption>DINOv2 patch PCA</figcaption></figure>
+          </div>
+          <h4 class="visualization-subtitle">Why DINOv2 for visualization?</h4>
+          <p class="visualization-note">Because its feature regions are spatially coherent, DINOv2 provides a more legible basis for localizing the response of the learned representation. This choice is limited to the visualization probe; LGSR training and quantitative evaluation continue to use the MAE encoder.</p>
+          <h4 class="visualization-subtitle">DINOv2 attention visualization</h4>
+          <p class="visualization-note">The overlays compare the same DINOv2 probe across the raw scene, LGSR without language guidance, and full LGSR, revealing where task conditioning changes the probe response.</p>
+          <div class="attention-probe-grid">
+            <figure class="attention-case">
+              <figcaption>Push the pink block right</figcaption>
+              <div class="attention-triplet">
+                <div><img src="static/images/additional/attention-push-pink-raw.jpg" alt="Raw CALVIN scene for pushing the pink block right." loading="lazy" width="224" height="224"><span>Raw image</span></div>
+                <div><img src="static/images/additional/attention-push-pink-no-language.jpg" alt="DINOv2 attention overlay for the model without language on the pink-block task." loading="lazy" width="224" height="224"><span>LGSR without language</span></div>
+                <div><img src="static/images/additional/attention-push-pink-lgsr.jpg" alt="DINOv2 attention overlay for full LGSR on the pink-block task." loading="lazy" width="224" height="224"><span>LGSR</span></div>
+              </div>
+            </figure>
+            <figure class="attention-case">
+              <figcaption>Turn off the LED</figcaption>
+              <div class="attention-triplet">
+                <div><img src="static/images/additional/attention-turn-off-led-raw.jpg" alt="Raw CALVIN scene for turning off the LED." loading="lazy" width="224" height="224"><span>Raw image</span></div>
+                <div><img src="static/images/additional/attention-turn-off-led-no-language.jpg" alt="DINOv2 attention overlay for the model without language on the LED task." loading="lazy" width="224" height="224"><span>LGSR without language</span></div>
+                <div><img src="static/images/additional/attention-turn-off-led-lgsr.jpg" alt="DINOv2 attention overlay for full LGSR on the LED task." loading="lazy" width="224" height="224"><span>LGSR</span></div>
+              </div>
+            </figure>
+            <figure class="attention-case">
+              <figcaption>Move the slider left</figcaption>
+              <div class="attention-triplet">
+                <div><img src="static/images/additional/attention-move-slider-left-raw.jpg" alt="Raw CALVIN scene for moving the slider left." loading="lazy" width="224" height="224"><span>Raw image</span></div>
+                <div><img src="static/images/additional/attention-move-slider-left-no-language.jpg" alt="DINOv2 attention overlay for the model without language on the slider task." loading="lazy" width="224" height="224"><span>LGSR without language</span></div>
+                <div><img src="static/images/additional/attention-move-slider-left-lgsr.jpg" alt="DINOv2 attention overlay for full LGSR on the slider task." loading="lazy" width="224" height="224"><span>LGSR</span></div>
+              </div>
+            </figure>
+            <figure class="attention-case">
+              <figcaption>Rotate the blue block right</figcaption>
+              <div class="attention-triplet">
+                <div><img src="static/images/additional/attention-rotate-blue-raw.jpg" alt="Raw CALVIN scene for rotating the blue block right." loading="lazy" width="224" height="224"><span>Raw image</span></div>
+                <div><img src="static/images/additional/attention-rotate-blue-no-language.jpg" alt="DINOv2 attention overlay for the model without language on the blue-block task." loading="lazy" width="224" height="224"><span>LGSR without language</span></div>
+                <div><img src="static/images/additional/attention-rotate-blue-lgsr.jpg" alt="DINOv2 attention overlay for full LGSR on the blue-block task." loading="lazy" width="224" height="224"><span>LGSR</span></div>
+              </div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="addendum-block" aria-labelledby="limitations-title">
+          <div class="block-heading"><h3 id="limitations-title">Scope and Limitations</h3></div>
+          <div class="limitation-grid">
+            <article><strong>Successful demonstrations</strong><p>The reward head is trained only on successful expert clips. Failure rollouts are out of distribution, so the auxiliary is not a calibrated reward for arbitrary policy states.</p></article>
+            <article><strong>Alignment requirement</strong><p>Time-to-go needs a language-aligned clip endpoint. Open-ended or unsegmented tasks would require task-specific milestones such as contact, half-open state, or release.</p></article>
+            <article><strong>Benchmark dependence</strong><p>The proxy objective helps on CALVIN but not on structurally saturated LIBERO-Long. Language fusion is the transferable contribution; the auxiliary benefit depends on task and scene structure.</p></article>
+          </div>
+        </article>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <section class="section citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="container is-max-desktop">
+        <div class="citation-layout">
+          <div class="section-heading">
+            <h2 id="citation-title">BibTeX</h2>
+            <p>The accepted preprint does not yet provide volume, issue, pages, or a DOI, so the entry intentionally avoids inventing them.</p>
+          </div>
+          <div class="citation-box">
+            <button type="button" data-copy-bibtex>Copy BibTeX</button>
+            <pre id="bibtex-code"><code>@article{zhang2026lgsr,
+  title   = {Improving Policy Learning via Language-Guided State Representation in World Models},
+  author  = {Zhang, Lixuan and Kan, Meina and Shan, Shiguang and Chen, Xilin},
+  journal = {IEEE Robotics and Automation Letters},
+  year    = {2026},
+  note    = {Accepted preprint}
+}</code></pre>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
+    </section>
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
+    <div class="container is-max-desktop footer-inner">
+      <p><strong>LGSR</strong> · Language-guided state representation for world-model policy learning.</p>
+      <p>Page structure adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">original academic page template</a>.</p>
     </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>

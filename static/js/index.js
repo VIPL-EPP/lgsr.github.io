@@ -1,142 +1,78 @@
-window.HELP_IMPROVE_VIDEOJS = false;
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.project-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('#nav-links');
+  const topButton = document.querySelector('.scroll-to-top');
+  const copyButton = document.querySelector('[data-copy-bibtex]');
+  const bibtex = document.querySelector('#bibtex-code');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// More Works Dropdown Functionality
-function toggleMoreWorks() {
-    const dropdown = document.getElementById('moreWorksDropdown');
-    const button = document.querySelector('.more-works-btn');
-    
-    if (dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    } else {
-        dropdown.classList.add('show');
-        button.classList.add('active');
+  const closeNavigation = () => {
+    navLinks?.classList.remove('is-open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle?.addEventListener('click', () => {
+    const isOpen = navLinks?.classList.toggle('is-open') ?? false;
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeNavigation);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (nav && !nav.contains(event.target)) closeNavigation();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeNavigation();
+  });
+
+  const updateTopButton = () => {
+    topButton?.classList.toggle('is-visible', window.scrollY > 480);
+  };
+
+  window.addEventListener('scroll', updateTopButton, { passive: true });
+  updateTopButton();
+
+  topButton?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+
+  copyButton?.addEventListener('click', async () => {
+    const citation = bibtex?.textContent.trim() ?? '';
+    if (!citation || !navigator.clipboard?.writeText) return;
+
+    try {
+      await navigator.clipboard.writeText(citation);
+      copyButton.textContent = 'Copied';
+      window.setTimeout(() => {
+        copyButton.textContent = 'Copy BibTeX';
+      }, 1600);
+    } catch {
+      copyButton.textContent = 'Copy unavailable';
     }
-}
+  });
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-    const container = document.querySelector('.more-works-container');
-    const dropdown = document.getElementById('moreWorksDropdown');
-    const button = document.querySelector('.more-works-btn');
-    
-    if (container && !container.contains(event.target)) {
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    }
-});
+  if ('IntersectionObserver' in window) {
+    const sectionLinks = new Map(
+      [...document.querySelectorAll('.nav-links a[href^="#"]')]
+        .map((link) => [link.getAttribute('href').slice(1), link]),
+    );
 
-// Close dropdown on escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const dropdown = document.getElementById('moreWorksDropdown');
-        const button = document.querySelector('.more-works-btn');
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    }
-});
-
-// Copy BibTeX to clipboard
-function copyBibTeX() {
-    const bibtexElement = document.getElementById('bibtex-code');
-    const button = document.querySelector('.copy-bibtex-btn');
-    const copyText = button.querySelector('.copy-text');
-    
-    if (bibtexElement) {
-        navigator.clipboard.writeText(bibtexElement.textContent).then(function() {
-            // Success feedback
-            button.classList.add('copied');
-            copyText.textContent = 'Cop';
-            
-            setTimeout(function() {
-                button.classList.remove('copied');
-                copyText.textContent = 'Copy';
-            }, 2000);
-        }).catch(function(err) {
-            console.error('Failed to copy: ', err);
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = bibtexElement.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            
-            button.classList.add('copied');
-            copyText.textContent = 'Cop';
-            setTimeout(function() {
-                button.classList.remove('copied');
-                copyText.textContent = 'Copy';
-            }, 2000);
-        });
-    }
-}
-
-// Scroll to top functionality
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-// Show/hide scroll to top button
-window.addEventListener('scroll', function() {
-    const scrollButton = document.querySelector('.scroll-to-top');
-    if (window.pageYOffset > 300) {
-        scrollButton.classList.add('visible');
-    } else {
-        scrollButton.classList.remove('visible');
-    }
-});
-
-// Video carousel autoplay when in view
-function setupVideoCarouselAutoplay() {
-    const carouselVideos = document.querySelectorAll('.results-carousel video');
-    
-    if (carouselVideos.length === 0) return;
-    
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const video = entry.target;
-            if (entry.isIntersecting) {
-                // Video is in view, play it
-                video.play().catch(e => {
-                    // Autoplay failed, probably due to browser policy
-                    console.log('Autoplay prevented:', e);
-                });
-            } else {
-                // Video is out of view, pause it
-                video.pause();
-            }
-        });
-    }, {
-        threshold: 0.5 // Trigger when 50% of the video is visible
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visible) return;
+      sectionLinks.forEach((link, id) => link.classList.toggle('is-active', id === visible.target.id));
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.2, 0.5] });
+
+    sectionLinks.forEach((_, id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
     });
-    
-    carouselVideos.forEach(video => {
-        observer.observe(video);
-    });
-}
-
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
-
-    var options = {
-		slidesToScroll: 1,
-		slidesToShow: 1,
-		loop: true,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
-    }
-
-	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
-    
-    // Setup video autoplay for carousel
-    setupVideoCarouselAutoplay();
-
-})
+  }
+});

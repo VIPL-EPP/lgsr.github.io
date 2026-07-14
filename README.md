@@ -1,80 +1,41 @@
-# Academic Project Page Template
+# LGSR Project Page
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+Official project page for **Improving Policy Learning via Language-Guided State Representation in World Models**, accepted by *IEEE Robotics and Automation Letters* in July 2026.
 
-A clean, responsive template for academic project pages.
+- [Project page](https://zhanglixuan0720.github.io/lgsr.github.io/)
+- [Paper](static/pdfs/lgsr-paper.pdf)
+- [Code](https://github.com/zhanglixuan0720/LGSR)
 
+## About
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+LGSR uses language instructions to guide compact, task-relevant state representations in world models for long-horizon robotic policy learning. The project page presents the method, CALVIN and LIBERO-Long results, representation analyses, and supplementary experiments.
 
+## Local preview
 
+The site is static and has no build step. From the repository root, run:
 
-## Start using the template
-To start using the template click on `Use this Template`.
+```bash
+python3 -m http.server 8000
+```
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+Then open <http://127.0.0.1:8000/>.
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+## Repository structure
 
-## What's New
+- `index.html`: page content and metadata.
+- `static/css/`: page and framework styles.
+- `static/js/`: navigation and citation interactions.
+- `static/images/`: paper figures, supplementary visualizations, and favicons.
+- `static/pdfs/`: accepted manuscript.
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+## Deployment
 
-## Components
-
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
-
-## Customization
-
-The HTML file has TODO comments showing what to replace:
-
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
-
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
-
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
-
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+The repository is published directly with GitHub Pages. All runtime assets are stored locally, so deployment does not require package installation or a build command.
 
 ## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+The presentation is inspired by the [Nerfies](https://nerfies.github.io/) and [VGGT](https://vgg-t.github.io/) project pages and is adapted from the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template).
+
+## Website license
+
+The project-page code is distributed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).

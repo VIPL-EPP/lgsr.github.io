@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">LGSR</title>
+  <rect width="64" height="64" rx="14" fill="#209cee"/>
+  <path fill="#fff" d="M17 13h11v28h20v10H17z"/>
+  <circle cx="42" cy="18" r="4" fill="#e8f7fe"/>
+  <circle cx="53" cy="18" r="4" fill="#b8e5fb"/>
+</svg>
