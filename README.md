@@ -8,7 +8,7 @@ Official project page for **Improving Policy Learning via Language-Guided State 
 
 ## About
 
-LGSR uses language instructions to guide compact, task-relevant state representations in world models for long-horizon robotic policy learning. The project page presents the method, CALVIN and LIBERO-Long results, representation analyses, and supplementary experiments.
+LGSR uses language instructions to guide compact, task-relevant state representations in world models for long-horizon robotic policy learning. The project page presents the method, CALVIN and LIBERO-Long results, representation analyses, and additional experiments.
 
 ## Local preview
 
@@ -25,7 +25,7 @@ Then open <http://127.0.0.1:8000/>.
 - `index.html`: page content and metadata.
 - `static/css/`: page and framework styles.
 - `static/js/`: navigation and citation interactions.
-- `static/images/`: paper figures, supplementary visualizations, and favicons.
+- `static/images/`: paper figures, additional visualizations, and favicons.
 - `static/pdfs/`: accepted manuscript.
 
 ## Deployment
