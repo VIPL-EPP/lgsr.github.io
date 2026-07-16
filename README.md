@@ -2,7 +2,7 @@
 
 Official project page for **Improving Policy Learning via Language-Guided State Representation in World Models**, accepted by *IEEE Robotics and Automation Letters* in July 2026.
 
-- [Project page](https://zhanglixuan0720.github.io/lgsr.github.io/)
+- [Project page](https://vipl-epp.github.io/lgsr.github.io/)
 - [Paper](static/pdfs/lgsr-paper.pdf)
 - [Code](https://github.com/zhanglixuan0720/LGSR)
 
